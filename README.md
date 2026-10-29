@@ -3,27 +3,50 @@
 
 **סטאק:** Next.js · TypeScript · Supabase · Prisma · PostgreSQL · Python · Claude API · Inngest · Stripe · Railway/Vercel
 
-## פרויקטים חיים ב-production
+---
 
-**Freight Invoice Auditor** — אודיט אוטומטי לחשבוניות משלוחים: פרסור PDF, התאמת תעריפים ב-Python, דוחות חריגות וחיסכון.
+## מקרי בוחן
+
+### Salezy — ניתוח שיחות מכירה בעברית
+הבעיה: מנהלי מכירות מקליטים שיחות ולא יודעים מה באמת קרה בהן.
+מה נבנה: מערכת שמעלה הקלטה ומקבלת ניתוח מלא — פרופיל DISC של הלקוח, סקורקרד למשווק עם ציטוטים מהשיחה, ציר שלבים, תוכנית אימון שבועית וזיהוי מגמות לאורך היסטוריית השיחות.
+איך: צינור אסינכרוני ב-Inngest (תמלול → ניתוח → סינתזה → ניקוד), ניתוח ב-Claude עם פלט מובנה ומאומת ב-Zod. RLS על כל טבלה, CSP ללא unsafe-inline, OTP מותאם, WCAG 2.1 AA.
+סטאק: Next.js 16 · React 19 · Supabase · Inngest · OpenAI · Claude
+🔗 https://salezy.vercel.app
+קוד: https://github.com/tchvut1221-ops/salezy
+
+### Freight Invoice Auditor — אודיט חשבוניות שילוח
+הבעיה: יבואנים משלמים על חשבוניות הובלה ימית בלי יכולת לבדוק אם החיוב תואם את התעריף שסוכם.
+מה נבנה: העלאת PDF, פרסור שורות החשבונית, התאמה מול הסכם התעריפים ב-Python, ודוח חריגות עם סכום החיסכון. נבדק על חשבונית אמיתית: 7 חריגות ו-567$ חיסכון בקריאה אחת.
+סטאק: Next.js · Supabase · Inngest · Python
 🔗 https://freight-auditor-six.vercel.app
 
-**Salezy** — SaaS ניתוח שיחות מכירה עם AI: תמלול עברי, ניתוח שיחות, לולאת תרגול מכירות.
-🔗 https://salezy.vercel.app
+### Yakir Academy — פלטפורמת LMS
+הבעיה: מכירת קורסים דיגיטליים דורשת חנות, הרשאות גישה ווידאו מוגן — לא רק דף נחיתה.
+מה נבנה: מערכת קורסים מלאה עם תשלום חד-פעמי, הרשאות ברמת השורה, ניהול שיעורים וצפייה מוגנת.
+סטאק: Next.js 16 · Prisma · PostgreSQL · Railway
 
-**Yakir Academy** — פלטפורמת LMS מלאה: קורסים, תשלומים, הרשאות גישה, וידאו, אבטחה ברמת השורה (RLS).
-Next.js 16 · Prisma · PostgreSQL
+---
 
-**Master Business OS** — פלטפורמת קואוצ'ינג עסקי דו-לשונית (ערבית/אנגלית) לשוק המזרח-תיכוני, RTL וערבית אמיתית, AI Plan Builder.
-Next.js 16 · Multi-tenant
+## פרויקטים נוספים
 
-**GovMatch (US)** — מקצה פארמה/ביוטק, אנגלית, אודיט אבטחה מלא, WCAG 2.1 AA.
+**Zchutcha** — פלטפורמה לנפגעי תאונות דרכים. תחום רגולטורי עם דרישות אבטחה ונגישות גבוהות; 70 תיקוני אבטחה ועיצוב לפני עלייה לאוויר. Next.js · Supabase · Inngest · Claude
 
-**Zchutcha** — פלטפורמה לנפגעי תאונות דרכים, נגישות מלאה.
+**GovMatch (US)** — התאמת מענקים לפארמה וביוטק. אודיט אבטחה מלא, WCAG 2.1 AA, אנגלית.
 
-## אוטומציות וסוכני AI
-בוטים, אינטגרציות MetaApi/Stripe/Resend/Voicenter, סנכרוני מערכות, בדיקות E2E בכל מסירה.
+**Master Business OS** — פלטפורמת קואוצ'ינג עסקי דו-לשונית (ערבית/אנגלית) לשוק המזרח-התיכון, RTL וערבית אמיתית, AI Plan Builder. Next.js 16 · Multi-tenant
 
-הקוד של פרויקטי לקוחות פרטי (NDA) — זמין להדגמה בפגישה.
+**אוטומציות וסוכני AI** — בוטים, אינטגרציות Stripe, Resend, MetaApi ו-Voicenter, סנכרוני מערכות, בדיקות E2E בכל מסירה.
 
-📫 tchvut1221@gmail.com
+---
+
+## כלים ותשתית
+`WhisperX on Runpod` — עובד Serverless לתמלול ודיאריזציה.
+🔗 https://github.com/tchvut1221-ops/runpod-whisperx-
+🔗 https://github.com/tchvut1221-ops/runpod-worker-whisper-diarization
+
+---
+
+קודם של פרויקטי לקוחות נמצא בריפו פרטי. זמין להדגמה בפגישה.
+
+📫 tchvut1221@gmail.com · 054-4837578
